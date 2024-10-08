@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scane and Play</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <style>
+        body{
+            font-family:"roboto";
+            text-align:center;
+            margin-top:50px;
+        }
+        #qrcode{
+            margin-top:10px;
+        }
+    </style>
+    <body>
+        <h1>
+            Scan and Play
+        </h1>
+        <div id = "qrcode"></div>
+    </body>
+    <script>
+        let qr_code = function(){
+            var text = 12;
+            if (text){
+                $("#qrcode").qrcode({
+                    text:"what is capital of France??",
+                    EventTarget:"black"
+
+                })
+            
+            }
+            else{
+                alert("message")
+            }
+        }
+        qr_code()
+    </script>
+</head>
+<html
